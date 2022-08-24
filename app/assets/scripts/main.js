@@ -1,5 +1,5 @@
 function setupDOM() {
-    $(".dcg-config-name")[0].innerText = "Untitled Graph";
+    $(".dcg-config-name")[0].innerText = "clicker";
     $(".dcg-header.dcg-secure-header.dcg-header-desktop").css("background-color", "#2a2a2a");
     $(".align-left-container")
         .prepend(`<i class="dcg-icon dcg-icon-plus"></i>`)
@@ -48,7 +48,7 @@ function eventHandlers() {
     });
     $(".dcg-config-name").click(() => {
         let txt = $(".dcg-config-name").text();
-        let title = (txt != "Untitled Graph") ? txt : "";
+        let title = (txt != "clicker") ? txt : "";
         addAlert(renameAlert(title), "rename");
         $(".title-input").select();
     });
@@ -102,7 +102,7 @@ function eventHandlers() {
         const reverseColors = $(".dcg-checkbox[aria-label='Reverse Contrast']");
         reverseColors.parent().unbind().click(() => {
             const checked = (reverseColors.attr("aria-checked") === "true") ? true : false;
-            $("body").css("background", (checked ? "#000" : "#fff"));
+            $("body").css("background", (checked ? "#f00" : "#fff"));
         });
     });
 
@@ -180,7 +180,7 @@ function addAlert(alert, type) {
         case "rename":
             $(".title-save").click(() => {
                 let txt = $(".title-input").val();
-                let title = (txt != "") ? txt : "Untitled Graph";
+                let title = (txt != "") ? txt : "clicker";
                 let old_title = $(".dcg-config-name").text();
                 if (old_title !== title) {
                     $(".dcg-config-name").text(title);
