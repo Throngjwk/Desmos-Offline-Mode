@@ -54,7 +54,7 @@ function fixCalc() {
             GREEN: '#388c46',
             ORANGE: '#fa7e19',
             PURPLE: '#6042a6',
-            BLACK: '#000000'
+            BLACK: '#ff00ff'
         },
         invertedColors: false,
         functionDefinition: true,
